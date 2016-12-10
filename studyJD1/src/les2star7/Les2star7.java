@@ -1,8 +1,8 @@
-package les2star7;
+п»їpackage les2star7;
 
 /*
- * 7**. Написать программу калькулятор, который умеет складывать и делить с консольным меню.
- *  Выход из программы осуществляется введением символа q
+ * 7**. РќР°РїРёСЃР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ, РєРѕС‚РѕСЂС‹Р№ СѓРјРµРµС‚ СЃРєР»Р°РґС‹РІР°С‚СЊ Рё РґРµР»РёС‚СЊ СЃ РєРѕРЅСЃРѕР»СЊРЅС‹Рј РјРµРЅСЋ.
+ *  Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІРІРµРґРµРЅРёРµРј СЃРёРјРІРѕР»Р° q
  */
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -18,27 +18,27 @@ public class Les2star7 {
 		double secondNum = 0;
 		String operation = "0";
 		double result = 0;
-		System.out.println("Данная программа представляет собой консольный калькулятор\n");
+		System.out.println("Р”Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃРѕР±РѕР№ РєРѕРЅСЃРѕР»СЊРЅС‹Р№ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ\n");
 		
 		while (menu !="q"){
 
-			System.out.println("\nПервое число: " + firstNum);
-			System.out.println("Операция: " + operation);
-			System.out.println("Второе число: " + secondNum);
-			System.out.println("Результат операции: " + result);
-			System.out.println("\n\tНажмите \"1\" - чтобы выбрать первое число;");
-			System.out.println("\tНажмите \"2\" - чтобы выбрать второе число;");
-			System.out.println("\tНажмите \"+\" - чтобы выполнить операцию сложения;");
-			System.out.println("\tНажмите \"-\" - чтобы выполнить операцию вычитания;");
-			System.out.println("\tНажмите \"*\" - чтобы выполнить операцию умножения;");
-			System.out.println("\tНажмите \"/\" - чтобы выполнить операцию деления;");
-			System.out.println("\tНажмите \"q\" - чтобы завершить программу.\n");
+			System.out.println("\nРџРµСЂРІРѕРµ С‡РёСЃР»Рѕ: " + firstNum);
+			System.out.println("РћРїРµСЂР°С†РёСЏ: " + operation);
+			System.out.println("Р’С‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: " + secondNum);
+			System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ РѕРїРµСЂР°С†РёРё: " + result);
+			System.out.println("\n\tРќР°Р¶РјРёС‚Рµ \"1\" - С‡С‚РѕР±С‹ РІС‹Р±СЂР°С‚СЊ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ;");
+			System.out.println("\tРќР°Р¶РјРёС‚Рµ \"2\" - С‡С‚РѕР±С‹ РІС‹Р±СЂР°С‚СЊ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ;");
+			System.out.println("\tРќР°Р¶РјРёС‚Рµ \"+\" - С‡С‚РѕР±С‹ РІС‹РїРѕР»РЅРёС‚СЊ РѕРїРµСЂР°С†РёСЋ СЃР»РѕР¶РµРЅРёСЏ;");
+			System.out.println("\tРќР°Р¶РјРёС‚Рµ \"-\" - С‡С‚РѕР±С‹ РІС‹РїРѕР»РЅРёС‚СЊ РѕРїРµСЂР°С†РёСЋ РІС‹С‡РёС‚Р°РЅРёСЏ;");
+			System.out.println("\tРќР°Р¶РјРёС‚Рµ \"*\" - С‡С‚РѕР±С‹ РІС‹РїРѕР»РЅРёС‚СЊ РѕРїРµСЂР°С†РёСЋ СѓРјРЅРѕР¶РµРЅРёСЏ;");
+			System.out.println("\tРќР°Р¶РјРёС‚Рµ \"/\" - С‡С‚РѕР±С‹ РІС‹РїРѕР»РЅРёС‚СЊ РѕРїРµСЂР°С†РёСЋ РґРµР»РµРЅРёСЏ;");
+			System.out.println("\tРќР°Р¶РјРёС‚Рµ \"q\" - С‡С‚РѕР±С‹ Р·Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ.\n");
 			
 			try {
 				menu = sc.next();
 				switch (menu){
 				case "1":{
-					System.out.print("Выберите первое число: ");
+					System.out.print("Р’С‹Р±РµСЂРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
 					firstNum = sc.nextDouble();
 					if (!operation.equals("0")){
 						Operation op = new Operation();
@@ -49,7 +49,7 @@ public class Les2star7 {
 						break;
 				}
 				case "2":{
-					System.out.print("Выберите второе число: ");
+					System.out.print("Р’С‹Р±РµСЂРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
 					secondNum = sc.nextDouble();
 					if (!operation.equals("0")){
 						Operation op = new Operation();
@@ -85,23 +85,23 @@ public class Les2star7 {
 						break;
 					}
 					else {
-						System.out.println("Делить на 0 нельзя!");
+						System.out.println("Р”РµР»РёС‚СЊ РЅР° 0 РЅРµР»СЊР·СЏ!");
 						break;
 					}
 				}
 							
 				case "q":{
-					System.out.println("Работа программы завершена.");
+					System.out.println("Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ Р·Р°РІРµСЂС€РµРЅР°.");
 					System.exit(1);
 				}
 				default:{
-					System.out.println("Пожалуйста, выберите пункт меню.");
+					System.out.println("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РІС‹Р±РµСЂРёС‚Рµ РїСѓРЅРєС‚ РјРµРЅСЋ.");
 					break;
 				}
 				}
 			}
 			catch (InputMismatchException exception){
-				System.out.println("Вы ввели некорректное значение.");
+				System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ.");
 				break;
 			}
 		}

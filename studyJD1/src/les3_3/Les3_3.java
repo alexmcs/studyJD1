@@ -1,7 +1,7 @@
-package les3_3;
+п»їpackage les3_3;
 
 /*
- * 3. В массиве из 15 чисел найти наименьший элемент и его индекс в массиве. 
+ * 3. Р’ РјР°СЃСЃРёРІРµ РёР· 15 С‡РёСЃРµР» РЅР°Р№С‚Рё РЅР°РёРјРµРЅСЊС€РёР№ СЌР»РµРјРµРЅС‚ Рё РµРіРѕ РёРЅРґРµРєСЃ РІ РјР°СЃСЃРёРІРµ. 
 */
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -9,15 +9,15 @@ import java.util.InputMismatchException;
 public class Les3_3 {
 
 	public static void main(String[] args) {
-		System.out.println("Данная программа генерирует массив с 15-ю целыми числами.\nИ выводит минимальное значение и его индекс в массиве.");
+		System.out.println("Р”Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° РіРµРЅРµСЂРёСЂСѓРµС‚ РјР°СЃСЃРёРІ СЃ 15-СЋ С†РµР»С‹РјРё С‡РёСЃР»Р°РјРё.\nР РІС‹РІРѕРґРёС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ Рё РµРіРѕ РёРЅРґРµРєСЃ РІ РјР°СЃСЃРёРІРµ.");
 		Scanner sc = new Scanner(System.in);
 		int menu = 1;
 		while (menu != 0) {
 
 			try {
 
-				System.out.println("\n\nНажмите \"1\" - чтобы заполнить массив случайными числами.");
-				System.out.println("Нажмите \"0\" - чтобы завершить работу программы.");
+				System.out.println("\n\nРќР°Р¶РјРёС‚Рµ \"1\" - С‡С‚РѕР±С‹ Р·Р°РїРѕР»РЅРёС‚СЊ РјР°СЃСЃРёРІ СЃР»СѓС‡Р°Р№РЅС‹РјРё С‡РёСЃР»Р°РјРё.");
+				System.out.println("РќР°Р¶РјРёС‚Рµ \"0\" - С‡С‚РѕР±С‹ Р·Р°РІРµСЂС€РёС‚СЊ СЂР°Р±РѕС‚Сѓ РїСЂРѕРіСЂР°РјРјС‹.");
 				System.out.println("--------------------------\n\n");
 
 				menu = sc.nextInt();
@@ -29,7 +29,7 @@ public class Les3_3 {
 					}
 					int min = arr[1];
 					int index = 0;
-					System.out.println("Массив имеет следующий вид:");
+					System.out.println("РњР°СЃСЃРёРІ РёРјРµРµС‚ СЃР»РµРґСѓСЋС‰РёР№ РІРёРґ:");
 					for (int i = 0; i < arr.length; i++) {
 						System.out.printf("%-6d", arr[i]);
 						if (min>arr[i]){
@@ -37,23 +37,23 @@ public class Les3_3 {
 							index = i;
 						}
 					}
-					System.out.printf("\n\nМинимальное значение массива: " + "%-5d", min, "\n");
-					System.out.printf("\nИндекс минимального значения: " + "%-5d", index, "\n");
+					System.out.printf("\n\nРњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РјР°СЃСЃРёРІР°: " + "%-5d", min, "\n");
+					System.out.printf("\nРРЅРґРµРєСЃ РјРёРЅРёРјР°Р»СЊРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ: " + "%-5d", index, "\n");
 					break;
 				}
 				case 0: {
-					System.out.println("Работа программы завершена.");
+					System.out.println("Р Р°Р±РѕС‚Р° РїСЂРѕРіСЂР°РјРјС‹ Р·Р°РІРµСЂС€РµРЅР°.");
 					System.exit(1);
 					break;
 				}
 				default: {
-					System.out.println("Выберите один пункт меню.");
+					System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РѕРґРёРЅ РїСѓРЅРєС‚ РјРµРЅСЋ.");
 					break;
 				}
 				}
 
 			} catch (InputMismatchException exception) {
-				System.out.println("Введены некорректные данные! Перезапустите программу.");
+				System.out.println("Р’РІРµРґРµРЅС‹ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ! РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ.");
 				System.exit(1);
 			}
 			

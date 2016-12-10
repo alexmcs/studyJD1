@@ -1,8 +1,8 @@
-package les2_2;
+п»їpackage les2_2;
 
 import java.util.InputMismatchException;
 /*
- 2. Написать программу, которая сравнивает два введенных с клавиатуры числа.
+ 2. РќР°РїРёСЃР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ СЃСЂР°РІРЅРёРІР°РµС‚ РґРІР° РІРІРµРґРµРЅРЅС‹С… СЃ РєР»Р°РІРёР°С‚СѓСЂС‹ С‡РёСЃР»Р°.
  */
 import java.util.Scanner;
 
@@ -12,24 +12,24 @@ public class Les2_2 {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("Введите первое число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
 			//nextInt will throw InputMismatchException
 			//if the next token does not match the Integer
 			int firstNum = sc.nextInt ();
-			System.out.println("Введите второе число: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
 			int secondNum = sc.nextInt ();
 			
 			if (firstNum > secondNum)
-				System.out.println("Число " + firstNum + " больше числа "+ secondNum +".");
+				System.out.println("Р§РёСЃР»Рѕ " + firstNum + " Р±РѕР»СЊС€Рµ С‡РёСЃР»Р° "+ secondNum +".");
 			else if (firstNum == secondNum)
-				System.out.println("Числа равны.");
+				System.out.println("Р§РёСЃР»Р° СЂР°РІРЅС‹.");
 			else
-				System.out.println("Число " + firstNum + " меньше числа "+ secondNum +".");
+				System.out.println("Р§РёСЃР»Рѕ " + firstNum + " РјРµРЅСЊС€Рµ С‡РёСЃР»Р° "+ secondNum +".");
 		}
 		
 		catch (InputMismatchException exception){
 			//when user put other than integer
-			System.out.println("Извините, Вы должны ввести число! Запустите программу заново.");
+			System.out.println("РР·РІРёРЅРёС‚Рµ, Р’С‹ РґРѕР»Р¶РЅС‹ РІРІРµСЃС‚Рё С‡РёСЃР»Рѕ! Р—Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ Р·Р°РЅРѕРІРѕ.");
 		}
 		sc.close();
 	}

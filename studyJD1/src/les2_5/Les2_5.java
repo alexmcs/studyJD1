@@ -1,9 +1,9 @@
-package les2_5;
+п»їpackage les2_5;
 /*
- * 5. Написать программу, которая вычисляет оптимальный вес для пользователя,
- *  сравнивает его с реальным и выдает рекомендацию о необходимости
- *   поправиться или похудеть. Оптимальный вес вычисляется по формуле:
- *    Рост (см) — 100.
+ * 5. РќР°РїРёСЃР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РІС‹С‡РёСЃР»СЏРµС‚ РѕРїС‚РёРјР°Р»СЊРЅС‹Р№ РІРµСЃ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ,
+ *  СЃСЂР°РІРЅРёРІР°РµС‚ РµРіРѕ СЃ СЂРµР°Р»СЊРЅС‹Рј Рё РІС‹РґР°РµС‚ СЂРµРєРѕРјРµРЅРґР°С†РёСЋ Рѕ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё
+ *   РїРѕРїСЂР°РІРёС‚СЊСЃСЏ РёР»Рё РїРѕС…СѓРґРµС‚СЊ. РћРїС‚РёРјР°Р»СЊРЅС‹Р№ РІРµСЃ РІС‹С‡РёСЃР»СЏРµС‚СЃСЏ РїРѕ С„РѕСЂРјСѓР»Рµ:
+ *    Р РѕСЃС‚ (СЃРј) вЂ” 100.
  */
 import java.util.Scanner;
 import java.util.InputMismatchException;
@@ -16,28 +16,28 @@ public class Les2_5 {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("Введите Ваш вес в кг: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ Р’Р°С€ РІРµСЃ РІ РєРі: ");
 			double weight = sc.nextDouble();
-			System.out.println("Введите Ваш рост в см: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ Р’Р°С€ СЂРѕСЃС‚ РІ СЃРј: ");
 			double height = sc.nextDouble();
 			double optimalWeight = height - 100; //Optimal weight calculation
 			double aberration = (abs(weight - optimalWeight)/optimalWeight); // Calculation of deviation from optimal weight. In percentage.
 			if ((aberration*100) <= 1){
-				System.out.println("У Вас оптимальный вес!");
+				System.out.println("РЈ Р’Р°СЃ РѕРїС‚РёРјР°Р»СЊРЅС‹Р№ РІРµСЃ!");
 			}
 			else if ((aberration*100) <= 7){
-				System.out.println("У Вас небольшие проблемы с весом.");
+				System.out.println("РЈ Р’Р°СЃ РЅРµР±РѕР»СЊС€РёРµ РїСЂРѕР±Р»РµРјС‹ СЃ РІРµСЃРѕРј.");
 				if (weight < optimalWeight)
-					System.out.println("Вам следует набрать около " + round(optimalWeight - weight) + "кг.");
+					System.out.println("Р’Р°Рј СЃР»РµРґСѓРµС‚ РЅР°Р±СЂР°С‚СЊ РѕРєРѕР»Рѕ " + round(optimalWeight - weight) + "РєРі.");
 				else
-					System.out.println("Вам следует скинуть около " + round(weight - optimalWeight) + "кг.");
+					System.out.println("Р’Р°Рј СЃР»РµРґСѓРµС‚ СЃРєРёРЅСѓС‚СЊ РѕРєРѕР»Рѕ " + round(weight - optimalWeight) + "РєРі.");
 			}
 			else {
-				System.out.println("У Вас серьезные проблемы с весом.");
+				System.out.println("РЈ Р’Р°СЃ СЃРµСЂСЊРµР·РЅС‹Рµ РїСЂРѕР±Р»РµРјС‹ СЃ РІРµСЃРѕРј.");
 				if (weight < optimalWeight)
-					System.out.println("Настоятельно рекомендую Вам набрать не менее " + round(optimalWeight - weight) + "кг.");
+					System.out.println("РќР°СЃС‚РѕСЏС‚РµР»СЊРЅРѕ СЂРµРєРѕРјРµРЅРґСѓСЋ Р’Р°Рј РЅР°Р±СЂР°С‚СЊ РЅРµ РјРµРЅРµРµ " + round(optimalWeight - weight) + "РєРі.");
 				else
-					System.out.println("Настоятельно рекомендую Вам скинуть не менее " + round(weight - optimalWeight) + "кг.");
+					System.out.println("РќР°СЃС‚РѕСЏС‚РµР»СЊРЅРѕ СЂРµРєРѕРјРµРЅРґСѓСЋ Р’Р°Рј СЃРєРёРЅСѓС‚СЊ РЅРµ РјРµРЅРµРµ " + round(weight - optimalWeight) + "РєРі.");
 			}
 		}
 		catch (InputMismatchException exception){

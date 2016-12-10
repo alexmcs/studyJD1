@@ -1,7 +1,7 @@
-package les2_3;
+п»їpackage les2_3;
 
 /*
-3. Написать программу, которая вычисляет частное двух чисел.
+3. РќР°РїРёСЃР°С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ РІС‹С‡РёСЃР»СЏРµС‚ С‡Р°СЃС‚РЅРѕРµ РґРІСѓС… С‡РёСЃРµР».
 */
 
 import java.util.InputMismatchException;
@@ -13,21 +13,21 @@ public class Les2_3 {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("Введите делимое: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ РґРµР»РёРјРѕРµ: ");
 			//nextInt will throw InputMismatchException
 			//if the next token does not match the Integer
 			double dividend = sc.nextDouble();
-			System.out.println("Введите делитель: ");
+			System.out.println("Р’РІРµРґРёС‚Рµ РґРµР»РёС‚РµР»СЊ: ");
 			double divider= sc.nextDouble();
 			while (divider == 0){
-				System.out.println("Делитель не может быть равным нулю! Попробуйте еще раз: ");
+				System.out.println("Р”РµР»РёС‚РµР»СЊ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЂР°РІРЅС‹Рј РЅСѓР»СЋ! РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·: ");
 				divider = sc.nextInt();
 			}
 			double privt = dividend / divider;
-			System.out.println("Частное чисел " + dividend + " и " + divider + " равно: " +privt);
+			System.out.println("Р§Р°СЃС‚РЅРѕРµ С‡РёСЃРµР» " + dividend + " Рё " + divider + " СЂР°РІРЅРѕ: " +privt);
 			}
 		catch (InputMismatchException exception){
-			System.out.println("Извините, Вы должны ввести число! Запустите программу заново.");
+			System.out.println("РР·РІРёРЅРёС‚Рµ, Р’С‹ РґРѕР»Р¶РЅС‹ РІРІРµСЃС‚Рё С‡РёСЃР»Рѕ! Р—Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ Р·Р°РЅРѕРІРѕ.");
 			//when user put other than integer
 		}
 		sc.close();

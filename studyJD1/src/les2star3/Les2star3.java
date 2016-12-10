@@ -1,10 +1,10 @@
-package les2star3;
+ï»¿package les2star3;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /*
- * 3*. Íàïèñàòü ïðîãðàììó, êîòîðàÿ âû÷èñëÿåò ôàêòîðèàë ââåäåííîãî ñ êëàâèàòóðû ÷èñëà.
+ * 3*. ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÑÐµÑ‚ Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ð²Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ð³Ð¾ Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹ Ñ‡Ð¸ÑÐ»Ð°.
  */
 
 public class Les2star3 {
@@ -13,43 +13,43 @@ public class Les2star3 {
 
 		Scanner sc = new Scanner(System.in);
 		int menu = 1;
-		System.out.println("Äàííàÿ ïðîãðàììà âû÷èñëÿåò ôàêòîðèàë ââåäåííîãî ÷èñëà");
+		System.out.println("Ð”Ð°Ð½Ð½Ð°Ñ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð²Ñ‹Ñ‡Ð¸ÑÐ»ÑÐµÑ‚ Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ð²Ð²ÐµÐ´ÐµÐ½Ð½Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°");
 		
 		while (menu !=0){
-			System.out.println("\tÍàæìèòå \"1\" - ÷òîáû ââåñòè íîâîå ÷èñëî;");
-			System.out.println("\tÍàæìèòå \"0\" - ÷òîáû çàâåðøèòü ïðîãðàììó.\n");
+			System.out.println("\tÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ \"1\" - Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð²Ð²ÐµÑÑ‚Ð¸ Ð½Ð¾Ð²Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾;");
+			System.out.println("\tÐÐ°Ð¶Ð¼Ð¸Ñ‚Ðµ \"0\" - Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð·Ð°Ð²ÐµÑ€ÑˆÐ¸Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ.\n");
 			
 			try {
 				menu = sc.nextInt();
 				switch (menu){
 				case 1:{
-					System.out.print("Âûáåðèòå ÷èñëî äëÿ ðàñ÷åòà ôàêòîðèàëà: ");
+					System.out.print("Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð´Ð»Ñ Ñ€Ð°ÑÑ‡ÐµÑ‚Ð° Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð»Ð°: ");
 					int n = sc.nextInt();
 					if (n > 0){
 						long fac = 1;
 						for (int i=1; i<=n; i++){
 							fac = fac*i;
 						}
-						System.out.println("Ôàêòîðèàë ÷èñëà  " + n + " ñîñòàâëÿåò: " + fac);
+						System.out.println("Ð¤Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð» Ñ‡Ð¸ÑÐ»Ð°  " + n + " ÑÐ¾ÑÑ‚Ð°Ð²Ð»ÑÐµÑ‚: " + fac);
 						break;
 					}
 					else {
-						System.out.println("Íåîáõîäèìî ââåñòè ïîëîæèòåëüíîå ÷èñëî.");
+						System.out.println("ÐÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð²Ð²ÐµÑÑ‚Ð¸ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾.");
 						break;
 					}
 				}
 				case 0:{
-					System.out.println("Ðàáîòà ïðîãðàììû çàâåðøåíà.");
+					System.out.println("Ð Ð°Ð±Ð¾Ñ‚Ð° Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹ Ð·Ð°Ð²ÐµÑ€ÑˆÐµÐ½Ð°.");
 					System.exit(1);
 				}
 				default:{
-					System.out.println("Ïîæàëóéñòà, âûáåðèòå ïóíêò ìåíþ.");
+					System.out.println("ÐŸÐ¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð²Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚ Ð¼ÐµÐ½ÑŽ.");
 					break;
 				}
 				}
 			}
 			catch (InputMismatchException exception){
-				System.out.println("Âû ââåëè íåêîððåêòíîå çíà÷åíèå.");
+				System.out.println("Ð’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð½ÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ.");
 				break;
 			}
 		}	
